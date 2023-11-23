@@ -1,3 +1,9 @@
+import Logo from "./components/Logo";
+
 export default function Header() {
-  return <header className="font-cursive">Ewbi</header>;
+  return (
+    <header >
+      <Logo />
+    </header>
+  );
 }
