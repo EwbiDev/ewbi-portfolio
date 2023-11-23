@@ -1,4 +1,4 @@
-import Title from "../../../commonComponents/Title";
+import Title from "@commonComponents/Title";
 
 export default function Landing() {
   return (
