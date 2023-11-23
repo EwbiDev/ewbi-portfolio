@@ -1,10 +1,10 @@
 export default function NavBar() {
   return (
-    <nav>
-      <ul>
-        <li>About</li>
-        <li>Projects</li>
-        <li>Contact</li>
+    <nav className="flex items-center">
+      <ul className="flex gap-4">
+        <li className="text-ewbi-gold p-4">About</li>
+        <li className="text-ewbi-gold p-4">Projects</li>
+        <li className="text-ewbi-gold p-4">Contact</li>
       </ul>
     </nav>
   );
