@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import TypeWriter from "./TypeWriter";
 
 export default function Title() {
   const [carouselArray, setCarouselArray] = useState([
@@ -20,7 +21,9 @@ export default function Title() {
   return (
     <div>
       <h1>I am</h1>
-      <h2 className="carousel">{carouselText}</h2>
+      <h2 className="carousel">
+        <TypeWriter inputText={carouselText} />
+      </h2>
     </div>
   );
 }
