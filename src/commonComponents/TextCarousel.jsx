@@ -23,11 +23,7 @@ export default function TextCarousel({ inputTextArray }) {
       setActiveItem((activeItemIndex + 1) % inputTextArray.length);
 
       const glitchChance = Math.random() * 10;
-      if (glitchChance < 10) {
-        setGlitch(true);
-      } else {
-        setGlitch(false);
-      }
+      setGlitch(glitchChance < 10);
     }
 
     setTimeout(nextItem, 5000);
