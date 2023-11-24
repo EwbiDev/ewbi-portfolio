@@ -20,7 +20,7 @@ export default function Title() {
   }, [carouselIndex, carouselArray]);
 
   return (
-    <div className="h-full grow">
+    <div className="h-full grow flex flex-col text-5xl justify-center">
       <h1>I am</h1>
       <h2 className="carousel">
         <TypeWriter inputText={carouselText} />
