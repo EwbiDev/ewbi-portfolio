@@ -34,7 +34,11 @@ export default function TextCarousel({ inputTextArray }) {
 
   useEffect(() => {
     const countDown = glitch ? 1500 : 15000;
-    setTimeout(() => setGlitch(!glitch), countDown);
+    const timeout = setTimeout(() => setGlitch(!glitch), countDown);
+
+    return () => {
+      clearTimeout(timeout)
+    }
   }, [glitch]);
 
   return (
