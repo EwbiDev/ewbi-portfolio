@@ -3,10 +3,10 @@ import Title from "@commonComponents/Title";
 
 export default function Landing() {
   return (
-    <section className="landing flex">
+    <section className="landing flex h-full">
       <PageMargin />
       <Title />
-      <PageMargin />
+      <PageMargin showImage={true}/>
     </section>
   );
 }
