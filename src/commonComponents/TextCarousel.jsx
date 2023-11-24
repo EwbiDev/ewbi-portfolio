@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export default function TextCarousel({ inputTextArray }) {
   const [activeItemIndex, setActiveItem] = useState(0);
-  const [glitch, setGlitch] = useState(true);
+  const [glitch, setGlitch] = useState(false);
   const [glitchIndex, setGlitchIndex] = useState(0);
 
   const activeText = inputTextArray[activeItemIndex];
@@ -13,7 +13,7 @@ export default function TextCarousel({ inputTextArray }) {
     }
 
     if (glitch) {
-      const interval = setInterval(randGlitchIdx, 125);
+      const interval = setInterval(randGlitchIdx, 50);
       return () => {
         clearInterval(interval);
       };
@@ -23,9 +23,6 @@ export default function TextCarousel({ inputTextArray }) {
   useEffect(() => {
     function nextItem() {
       setActiveItem((activeItemIndex + 1) % inputTextArray.length);
-
-      const glitchChance = Math.random() * 10;
-      setGlitch(glitchChance < 10);
     }
 
     const interval = setInterval(nextItem, 5000);
@@ -34,6 +31,11 @@ export default function TextCarousel({ inputTextArray }) {
       clearInterval(interval);
     };
   }, [activeItemIndex, inputTextArray]);
+
+  useEffect(() => {
+    const countDown = glitch ? 1500 : 15000;
+    setTimeout(() => setGlitch(!glitch), countDown);
+  }, [glitch]);
 
   return (
     <div className="text-carousel flex overflow-hidden">
@@ -72,7 +74,7 @@ export default function TextCarousel({ inputTextArray }) {
       "text-gray-700",
       "text-orange-700",
     ];
-
+    
     const randNum = Math.floor(Math.random() * glitchColors.length);
     return glitchColors[randNum];
   }
