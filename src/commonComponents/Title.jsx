@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import TypeWriter from "./TypeWriter";
+import TextCarousel from "./TextCarousel";
 
 export default function Title() {
   const [carouselArray, setCarouselArray] = useState([
@@ -7,23 +8,12 @@ export default function Title() {
     "Software Developer",
     "Work in progress",
   ]);
-  const [carouselIndex, setCarouselIndex] = useState(0);
-
-  const carouselText = carouselArray[carouselIndex];
-
-  useEffect(() => {
-    function pickCarouselItem() {
-      setCarouselIndex((carouselIndex + 1) % carouselArray.length);
-    }
-
-    setTimeout(pickCarouselItem, 5000);
-  }, [carouselIndex, carouselArray]);
 
   return (
-    <div className="h-full grow flex flex-col text-5xl justify-center">
+    <div className="flex h-full grow flex-col justify-center text-5xl">
       <h1>I am</h1>
       <h2 className="carousel">
-        <TypeWriter inputText={carouselText} />
+        <TextCarousel inputTextArray={carouselArray} />
       </h2>
     </div>
   );
