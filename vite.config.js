@@ -10,5 +10,6 @@ export default defineConfig({
       "@commonComponents": path.resolve(__dirname, "src/commonComponents"),
       "@assets": path.resolve(__dirname, "src/assets"),
     }
-  }
+  },
+  base: "/ewbi-portfolio"
 })
