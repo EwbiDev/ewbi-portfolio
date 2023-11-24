@@ -63,18 +63,26 @@ export default function TextCarousel({ inputTextArray }) {
 
   function randColor() {
     const glitchColors = [
-      "text-red-700",
-      "text-blue-700",
-      "text-green-700",
-      "text-yellow-700",
-      "text-purple-700",
-      "text-pink-700",
-      "text-indigo-700",
-      "text-cyan-700",
-      "text-gray-700",
-      "text-orange-700",
+      "text-slate-400",
+      "text-red-400",
+      "text-orange-400",
+      "text-amber-400",
+      "text-yellow-400",
+      "text-lime-400",
+      "text-green-400",
+      "text-emerald-400",
+      "text-teal-400",
+      "text-cyan-400",
+      "text-sky-400",
+      "text-blue-400",
+      "text-indigo-400",
+      "text-violet-400",
+      "text-purple-400",
+      "text-fuchsia-400",
+      "text-pink-400",
+      "text-rose-400",
     ];
-    
+
     const randNum = Math.floor(Math.random() * glitchColors.length);
     return glitchColors[randNum];
   }
