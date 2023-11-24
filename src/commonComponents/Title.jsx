@@ -5,6 +5,7 @@ export default function Title() {
   const [carouselArray, setCarouselArray] = useState([
     "Eduard Bissell",
     "Software Developer",
+    "Work in progress",
   ]);
   const [carouselIndex, setCarouselIndex] = useState(0);
 
