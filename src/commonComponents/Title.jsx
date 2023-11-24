@@ -19,7 +19,7 @@ export default function Title() {
   }, [carouselIndex, carouselArray]);
 
   return (
-    <div>
+    <div className="h-full bg-red-200 grow">
       <h1>I am</h1>
       <h2 className="carousel">
         <TypeWriter inputText={carouselText} />
