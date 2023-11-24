@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export default function TextCarousel({ inputTextArray }) {
   const [activeItemIndex, setActiveItem] = useState(0);
-  const [glitch, setGlitch] = useState(false);
+  const [glitch, setGlitch] = useState(true);
   const [glitchIndex, setGlitchIndex] = useState(0);
 
   const activeText = inputTextArray[activeItemIndex];
@@ -14,7 +14,10 @@ export default function TextCarousel({ inputTextArray }) {
     }
 
     if (glitch) {
-      setTimeout(randGlitchIdx, 50);
+      const interval = setInterval(randGlitchIdx, 125);
+      return () => {
+        clearInterval(interval);
+      };
     }
   }, [glitchIndex, glitch]);
 
@@ -26,7 +29,11 @@ export default function TextCarousel({ inputTextArray }) {
       setGlitch(glitchChance < 10);
     }
 
-    setTimeout(nextItem, 5000);
+    const interval = setInterval(nextItem, 5000);
+
+    return () => {
+      clearInterval(interval);
+    };
   }, [activeItemIndex, inputTextArray]);
 
   return (
