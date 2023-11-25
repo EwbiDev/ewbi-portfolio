@@ -5,3 +5,7 @@
 :root {
   font-family: "Rokkitt", serif;
 }
+
+.red-filter {
+  filter: sepia(1) saturate(2) hue-rotate(280deg)
+}
