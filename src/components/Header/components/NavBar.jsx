@@ -1,10 +1,13 @@
 export default function NavBar() {
+  const navItems = ["About", "Projects", "Contact"];
   return (
     <nav className="flex items-center">
       <ul className="flex gap-4">
-        <li className="text-ewbi-gold p-4">About</li>
-        <li className="text-ewbi-gold p-4">Projects</li>
-        <li className="text-ewbi-gold p-4">Contact</li>
+        {navItems.map((item) => (
+          <li key={`nav-item-${item}`} className="p-4 text-ewbi-gold">
+            {item}
+          </li>
+        ))}
       </ul>
     </nav>
   );
