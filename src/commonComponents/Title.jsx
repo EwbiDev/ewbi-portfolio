@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import TypeWriter from "./TypeWriter";
+import { useState } from "react";
 import TextCarousel from "./TextCarousel";
 
 export default function Title() {
