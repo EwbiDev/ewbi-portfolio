@@ -1,12 +1,9 @@
-import PageMargin from "@commonComponents/PageMargin";
 import Title from "@commonComponents/Title";
 
 export default function Landing() {
   return (
-    <section className="landing flex h-full">
-      <PageMargin />
+    <section className="landing flex h-full grow">
       <Title />
-      <PageMargin showImage={true}/>
     </section>
   );
 }
