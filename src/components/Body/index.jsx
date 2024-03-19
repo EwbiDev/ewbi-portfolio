@@ -1,11 +1,11 @@
-import Landing from "./components/Landing";
+import Content from "../Content";
 import PageMargin from "@commonComponents/PageMargin";
 
 export default function Body() {
   return (
-    <div className="content flex h-full w-full overflow-hidden">
+    <div className="content flex h-full w-full">
       <PageMargin />
-      <Landing />
+      <Content />
       <PageMargin showImage={true} />
     </div>
   );
