@@ -5,7 +5,7 @@ export default function NavBar() {
       <ul className="flex gap-4">
         {navItems.map((item) => (
           <li key={`nav-item-${item}`} className="p-4 text-ewbi-gold">
-            <a href="#">{item}</a>
+            <a href={`#${item}`}>{item}</a>
           </li>
         ))}
       </ul>
