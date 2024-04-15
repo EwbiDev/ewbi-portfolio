@@ -3,6 +3,7 @@ import NextPage from "@commonComponents/NextPage";
 import About from "../About";
 import Landing from "../Landing";
 import ProjectList from "../ProjectList";
+import Contact from "../Contact";
 
 export default function Content() {
   return (
@@ -10,6 +11,7 @@ export default function Content() {
       <Landing />
       <About />
       <ProjectList />
+      <Contact />
       <NextPage />
     </main>
   );
