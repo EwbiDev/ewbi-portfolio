@@ -1,12 +1,9 @@
 import Content from "../Content";
-import PageMargin from "@commonComponents/PageMargin";
 
 export default function Body() {
   return (
-    <div className="content flex h-full w-full">
-      <PageMargin />
+    <div className="content h-full w-full">
       <Content />
-      <PageMargin showImage={true} />
     </div>
   );
 }

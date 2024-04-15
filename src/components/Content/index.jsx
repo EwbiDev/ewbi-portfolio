@@ -6,7 +6,7 @@ import ProjectList from "../ProjectList";
 
 export default function Content() {
   return (
-    <main className="grow">
+    <main className="mx-auto grow sm:max-w-[640px] lg:max-w-[768px] xl:max-w-[1024px]">
       <Landing />
       <About />
       <ProjectList />
