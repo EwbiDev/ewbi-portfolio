@@ -6,7 +6,7 @@ export default function Project({titleText, coverImg, summaryText, gitHubLink, g
     <li className="grid w-full gap-2 rounded-xl border bg-white p-2">
       <h3 className="text-center text-3xl">{titleText}</h3>
       <div className="flex justify-center">
-        <img src={coverImg} className="rounded-lg object-cover"></img>
+        <img src={coverImg} className="rounded-lg object-cover" />
       </div>
 
       <p>{summaryText}</p>
