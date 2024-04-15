@@ -9,7 +9,7 @@ export default function Title() {
 
   return (
     <div className="m-4 flex h-full grow flex-col justify-center text-5xl">
-      <h1>Ewbi</h1>
+      <h1>Hi, from Ewbi!</h1>
       <h2 className="carousel relative">
         <TextCarousel inputTextArray={carouselArray} />
       </h2>
