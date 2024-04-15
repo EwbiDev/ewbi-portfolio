@@ -3,7 +3,7 @@ import Header from "./components/Header";
 
 function App() {
   return (
-    <div className="min-h-screen w-dvw flex flex-col bg-ewbi-page overflow-x-hidden">
+    <div className="min-h-screen flex flex-col bg-ewbi-page overflow-x-hidden">
       <Header />
       <Body />
     </div>
