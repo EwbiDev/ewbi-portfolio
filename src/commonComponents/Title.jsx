@@ -4,13 +4,12 @@ import TextCarousel from "./TextCarousel";
 export default function Title() {
   const [carouselArray, setCarouselArray] = useState([
     "Eduard Bissell",
-    "Software Developer",
-    "Work in progress",
+    "Full Stack Developer",
   ]);
 
   return (
     <div className="m-4 flex h-full grow flex-col justify-center text-5xl">
-      <h1>I am</h1>
+      <h1>Ewbi</h1>
       <h2 className="carousel relative">
         <TextCarousel inputTextArray={carouselArray} />
       </h2>
