@@ -25,9 +25,13 @@ export default function Project({
       </div>
 
       <p>{summaryText}</p>
-      <div className="flex justify-center gap-4">
+      <div className="flex flex-wrap justify-center gap-4">
         <LinkButton href={gitHubLink} imgSrc={github} text={gitHubLinkText} />
-        <LinkButton href={demoLink} imgSrc={link} text="Live Demo" />
+        <LinkButton
+          href={demoLink}
+          imgSrc={link}
+          text="Live Demo (Coming Soon)"
+        />
       </div>
     </li>
   );
@@ -42,7 +46,7 @@ function LinkButton({ href, imgSrc, text }) {
       rel="noreferrer"
     >
       <img src={imgSrc} className="h-8"></img>
-      <div>{text}</div>
+      <div className="truncate">{text}</div>
     </a>
   );
 }
