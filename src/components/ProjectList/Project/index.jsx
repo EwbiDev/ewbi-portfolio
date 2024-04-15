@@ -31,7 +31,7 @@ function LinkButton({ href, imgSrc, text }) {
     <a
       href={href}
       target="_blank"
-      className="flex items-center gap-2 rounded-lg bg-ewbi-gold p-2"
+      className="flex items-center gap-2 rounded-lg bg-ewbi-gold p-2 transition hover:scale-105"
       rel="noreferrer"
     >
       <img src={imgSrc} className="h-8"></img>
