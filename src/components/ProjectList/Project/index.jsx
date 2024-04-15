@@ -1,26 +1,22 @@
 import github from "@assets/logos/github.svg";
-import drumbi from "@assets/projects/drumbi.png";
 import link from "@assets/matUI/link.svg";
 
-export default function Project() {
+export default function Project({titleText, coverImg, summaryText, gitHubLink, gitHubLinkText, demoLink}) {
   return (
     <li className="grid w-full gap-2 rounded-xl border bg-white p-2">
-      <h3 className="text-center text-3xl">Drumbi - Drum Machine</h3>
+      <h3 className="text-center text-3xl">{titleText}</h3>
       <div className="flex justify-center">
-        <img src={drumbi} className="rounded-lg object-cover"></img>
+        <img src={coverImg} className="rounded-lg object-cover"></img>
       </div>
 
-      <p>
-        A sequencer which allows for changes to be made mid playback, allowing
-        users to iterate on their beat without interruptions.
-      </p>
+      <p>{summaryText}</p>
       <div className="flex justify-center gap-4">
         <LinkButton
-          href={"https://github.com/EwbiDev/drumbi"}
+          href={gitHubLink}
           imgSrc={github}
-          text="EwbiDev/drumbi"
+          text={gitHubLinkText}
         />
-        <LinkButton href={"#"} imgSrc={link} text="Live Demo" />
+        <LinkButton href={demoLink} imgSrc={link} text="Live Demo" />
       </div>
     </li>
   );
