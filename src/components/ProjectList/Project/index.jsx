@@ -15,7 +15,7 @@ export default function Project({
   return (
     <li className="grid w-full gap-2 rounded-xl border bg-white p-2">
       <h3 className="text-center text-3xl">{titleText}</h3>
-      <div className="relative mx-auto flex w-max justify-center">
+      <div className="relative mx-auto flex w-fit justify-center">
         <img src={coverImg} className="rounded-lg object-cover" />
         <ul className="absolute right-1 top-1 flex gap-2">
           {techLogos.map((logo) => (
