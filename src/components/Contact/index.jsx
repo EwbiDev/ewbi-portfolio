@@ -1,14 +1,27 @@
+import { useEffect } from "react";
+
+import { useInView } from "react-intersection-observer";
+
 import Card from "@commonComponents/Card";
 
 import email from "@assets/matUI/email.svg";
 import linkedin from "@assets/logos/linkedin.svg";
 import github from "@assets/logos/github.svg";
 
-export default function Contact() {
+export default function Contact({ section, setSection }) {
+  const { ref, inView } = useInView();
+
+  useEffect(() => {
+    if (section.contact !== inView) {
+      setSection({ ...section, contact: inView });
+    }
+  }, [inView, section, setSection]);
+
   return (
     <section
       className="m-4 flex h-screen snap-start flex-col justify-center gap-4"
       id="Contact"
+      ref={ref}
     >
       <h2 className="text-5xl">Contact</h2>
       <Card>
@@ -32,7 +45,6 @@ export default function Contact() {
           url="https://www.github.com/EwbiDev"
         />
       </ul>
-
     </section>
   );
 }

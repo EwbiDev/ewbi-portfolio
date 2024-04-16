@@ -1,3 +1,7 @@
+import { useEffect } from "react";
+
+import { useInView } from "react-intersection-observer";
+
 import Card from "@commonComponents/Card";
 import Logo from "@commonComponents/Logo";
 
@@ -27,11 +31,20 @@ const aboutTechLogos = [
   { name: "Git", file: gitLogo },
 ];
 
-export default function About() {
+export default function About({ section, setSection }) {
+  const { ref, inView } = useInView();
+
+  useEffect(() => {
+    if (section.about !== inView) {
+      setSection({ ...section, about: inView });
+    }
+  }, [inView, section, setSection]);
+
   return (
     <section
       className="m-4 flex h-screen snap-start flex-col justify-center space-y-4"
       id="About"
+      ref={ref}
     >
       <h2 className="text-5xl">About Me</h2>
       <Card>

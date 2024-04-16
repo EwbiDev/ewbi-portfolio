@@ -1,3 +1,7 @@
+import { useEffect } from "react";
+
+import { useInView } from "react-intersection-observer";
+
 import Project from "./Project";
 
 import drumbiCover from "@assets/projects/drumbi.png";
@@ -12,11 +16,20 @@ const drumbiTechLogos = [
   { name: "Javascript", file: javascriptLogo },
 ];
 
-export default function ProjectList() {
+export default function ProjectList({ section, setSection }) {
+  const { ref, inView } = useInView();
+
+  useEffect(() => {
+    if (section.projects !== inView) {
+      setSection({ ...section, projects: inView });
+    }
+  }, [inView, section, setSection]);
+
   return (
     <div
       className="m-4 flex h-screen snap-start flex-col justify-center"
       id="Projects"
+      ref={ref}
     >
       <h2 className="text-5xl">Projects</h2>
       <ul className="flex">
