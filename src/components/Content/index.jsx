@@ -8,17 +8,15 @@ import ProjectList from "../ProjectList";
 import Contact from "../Contact";
 
 export default function Content() {
-  const [section, setSection] = useState({});
-
-  console.log(section)
+  const [visible, setVisible] = useState({});
 
   return (
     <main className="z-20 mx-auto grow sm:max-w-[640px] lg:max-w-[768px] xl:mx-32 xl:max-w-[1024px]">
-      <Landing section={section} setSection={setSection}/>
-      <About section={section} setSection={setSection} />
-      <ProjectList section={section} setSection={setSection} />
-      <Contact section={section} setSection={setSection} />
-      <NextPage section={section} setSection={setSection} />
+      <Landing visible={visible} setVisible={setVisible} />
+      <About visible={visible} setVisible={setVisible} />
+      <ProjectList visible={visible} setVisible={setVisible} />
+      <Contact visible={visible} setVisible={setVisible} />
+      <NextPage visible={visible} setVisible={setVisible} />
     </main>
   );
 }

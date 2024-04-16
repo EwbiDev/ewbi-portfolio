@@ -31,14 +31,14 @@ const aboutTechLogos = [
   { name: "Git", file: gitLogo },
 ];
 
-export default function About({ section, setSection }) {
+export default function About({ visible, setVisible }) {
   const { ref, inView } = useInView();
 
   useEffect(() => {
-    if (section.about !== inView) {
-      setSection({ ...section, about: inView });
+    if (visible.about !== inView) {
+      setVisible({ ...visible, about: inView });
     }
-  }, [inView, section, setSection]);
+  }, [inView, visible, setVisible]);
 
   return (
     <section

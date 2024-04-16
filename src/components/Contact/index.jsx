@@ -8,14 +8,14 @@ import email from "@assets/matUI/email.svg";
 import linkedin from "@assets/logos/linkedin.svg";
 import github from "@assets/logos/github.svg";
 
-export default function Contact({ section, setSection }) {
+export default function Contact({ visible, setVisible }) {
   const { ref, inView } = useInView();
 
   useEffect(() => {
-    if (section.contact !== inView) {
-      setSection({ ...section, contact: inView });
+    if (visible.contact !== inView) {
+      setVisible({ ...visible, contact: inView });
     }
-  }, [inView, section, setSection]);
+  }, [inView, visible, setVisible]);
 
   return (
     <section

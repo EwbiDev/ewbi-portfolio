@@ -16,14 +16,14 @@ const drumbiTechLogos = [
   { name: "Javascript", file: javascriptLogo },
 ];
 
-export default function ProjectList({ section, setSection }) {
+export default function ProjectList({ visible, setVisible }) {
   const { ref, inView } = useInView();
 
   useEffect(() => {
-    if (section.projects !== inView) {
-      setSection({ ...section, projects: inView });
+    if (visible.projects !== inView) {
+      setVisible({ ...visible, projects: inView });
     }
-  }, [inView, section, setSection]);
+  }, [inView, visible, setVisible]);
 
   return (
     <div

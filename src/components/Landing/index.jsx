@@ -4,14 +4,14 @@ import { useInView } from "react-intersection-observer";
 
 import Title from "@commonComponents/Title";
 
-export default function Landing({ section, setSection }) {
+export default function Landing({ visible, setVisible }) {
   const { ref, inView } = useInView();
 
   useEffect(() => {
-    if (section.landing !== inView) {
-      setSection({ ...section, landing: inView });
+    if (visible.landing !== inView) {
+      setVisible({ ...visible, landing: inView });
     }
-  }, [inView, section, setSection]);
+  }, [inView, visible, setVisible]);
 
   return (
     <section className="landing flex h-screen grow snap-start" ref={ref}>
