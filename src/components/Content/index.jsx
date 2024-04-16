@@ -24,7 +24,11 @@ export default function Content() {
       <About visible={visible} setVisible={setVisible} />
       <ProjectList visible={visible} setVisible={setVisible} />
       <Contact visible={visible} setVisible={setVisible} />
-      <NextPage visible={visible} setVisible={setVisible} nextSection={nextSection} />
+      <NextPage
+        visible={visible}
+        setVisible={setVisible}
+        nextSection={nextSection}
+      />
     </main>
   );
 }
