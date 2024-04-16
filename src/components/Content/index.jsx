@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import NextPage from "@commonComponents/NextPage";
 
@@ -9,6 +9,14 @@ import Contact from "../Contact";
 
 export default function Content() {
   const [visible, setVisible] = useState({});
+  const [nextSection, setNextSection] = useState("#about")
+
+  useEffect(() => {
+    const sections = ["landing", "about", "projects", "contact"];
+    const curSectionIdx = sections.findIndex((section) => visible[section]);
+
+    setNextSection(sections[curSectionIdx + 1])
+  }, [visible])
 
   return (
     <main className="z-20 mx-auto grow sm:max-w-[640px] lg:max-w-[768px] xl:mx-32 xl:max-w-[1024px]">
@@ -16,7 +24,7 @@ export default function Content() {
       <About visible={visible} setVisible={setVisible} />
       <ProjectList visible={visible} setVisible={setVisible} />
       <Contact visible={visible} setVisible={setVisible} />
-      <NextPage visible={visible} setVisible={setVisible} />
+      <NextPage visible={visible} setVisible={setVisible} nextSection={nextSection} />
     </main>
   );
 }
