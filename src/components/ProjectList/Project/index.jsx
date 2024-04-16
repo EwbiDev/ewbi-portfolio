@@ -12,6 +12,7 @@ export default function Project({
   gitHubLink,
   gitHubLinkText,
   demoLink,
+  demoEnable,
 }) {
   return (
     <li>
@@ -33,11 +34,13 @@ export default function Project({
               href={gitHubLink}
               imgSrc={github}
               text={gitHubLinkText}
+              enable={true}
             />
             <LinkButton
               href={demoLink}
               imgSrc={link}
               text="Live Demo (Coming Soon)"
+              enable={demoEnable}
             />
           </div>
         </div>
@@ -46,13 +49,19 @@ export default function Project({
   );
 }
 
-function LinkButton({ href, imgSrc, text }) {
+function LinkButton({ href, imgSrc, text, enable }) {
+  const baseClass =
+    "flex items-center gap-2 rounded-lg p-2 bg-ewbi-gold transition hover:scale-105";
+  const disabledClass =
+    baseClass + " text-gray-700 bg-gray-300 cursor-not-allowed";
+
   return (
     <a
       href={href}
       target="_blank"
-      className="flex items-center gap-2 rounded-lg bg-ewbi-gold p-2 transition hover:scale-105"
+      className={enable ? baseClass : disabledClass}
       rel="noreferrer"
+      onClick={(event) => !enable && event.preventDefault()}
     >
       <img src={imgSrc} className="h-8"></img>
       <div className="truncate">{text}</div>

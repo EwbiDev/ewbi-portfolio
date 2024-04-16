@@ -42,6 +42,7 @@ export default function ProjectList({ visible, setVisible }) {
           gitHubLink="https://github.com/EwbiDev/drumbi"
           gitHubLinkText="EwbiDev/drumbi"
           demoLink="#"
+          demoEnable={false}
         />
       </ul>
     </div>
