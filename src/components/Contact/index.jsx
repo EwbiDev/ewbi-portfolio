@@ -1,6 +1,6 @@
 import email from "@assets/matUI/email.svg";
-import linkedin from "@assets/logos/linkedin.svg"
-import github from "@assets/logos/github.svg"
+import linkedin from "@assets/logos/linkedin.svg";
+import github from "@assets/logos/github.svg";
 
 export default function Contact() {
   return (
@@ -37,10 +37,10 @@ function ContactLink({ img, text, url }) {
       <a
         href={url}
         target="_blank"
-        className="flex items-center cursor-pointer gap-2 rounded-2xl bg-ewbi-gold p-4 transition hover:scale-110"
+        className="flex cursor-pointer items-center gap-2 rounded-2xl bg-ewbi-gold p-4 transition hover:scale-110"
         rel="noreferrer"
       >
-        <img src={img} alt={text} className="w-14 h-10 object-contain"/>
+        <img src={img} alt={text} className="h-10 w-14 object-contain" />
         <span>{text}</span>
       </a>
     </li>
