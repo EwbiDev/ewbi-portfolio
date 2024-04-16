@@ -7,13 +7,15 @@ import github from "@assets/logos/github.svg";
 export default function Contact() {
   return (
     <section
-      className="m-4 flex h-screen snap-start flex-col justify-center"
+      className="m-4 flex h-screen snap-start flex-col justify-center gap-4"
       id="Contact"
     >
       <h2 className="text-5xl">Contact</h2>
       <Card>
         <p>Feel free to get in touch in the following places:</p>
-        <ul className="flex gap-8">
+      </Card>
+
+        <ul className="flex flex-wrap gap-4">
           <ContactLink
             img={email}
             text="Email"
@@ -30,21 +32,21 @@ export default function Contact() {
             url="https://www.github.com/EwbiDev"
           />
         </ul>
-      </Card>
+
     </section>
   );
 }
 
 function ContactLink({ img, text, url }) {
   return (
-    <li>
+    <li className="w-fit min-w-32">
       <a
         href={url}
         target="_blank"
-        className="flex cursor-pointer items-center gap-2 rounded-2xl bg-ewbi-gold p-4 transition hover:scale-110"
+        className="flex cursor-pointer items-center gap-2 rounded-2xl bg-ewbi-gold p-2 transition hover:scale-105"
         rel="noreferrer"
       >
-        <img src={img} alt={text} className="h-10 w-14 object-contain" />
+        <img src={img} alt={text} className="h-10 w-10 object-contain" />
         <span>{text}</span>
       </a>
     </li>
