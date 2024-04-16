@@ -9,14 +9,15 @@ import Contact from "../Contact";
 
 export default function Content() {
   const [visible, setVisible] = useState({});
-  const [nextSection, setNextSection] = useState("#about")
+  const [nextSection, setNextSection] = useState("#about");
 
   useEffect(() => {
     const sections = ["landing", "about", "projects", "contact"];
     const curSectionIdx = sections.findIndex((section) => visible[section]);
+    const next = sections[curSectionIdx + 1];
 
-    setNextSection(sections[curSectionIdx + 1])
-  }, [visible])
+    setNextSection(next || "");
+  }, [visible]);
 
   return (
     <main className="z-20 mx-auto grow sm:max-w-[640px] lg:max-w-[768px] xl:mx-32 xl:max-w-[1024px]">
