@@ -1,3 +1,4 @@
+import Card from "@commonComponents/Card";
 import Logo from "@commonComponents/Logo";
 
 import htmlLogo from "@assets/logos/used-tech/html.svg";
@@ -33,20 +34,24 @@ export default function About() {
       id="About"
     >
       <h2 className="text-5xl">About Me</h2>
-      <p>
-        Hello! I&#39;m Eduard, full-stack developer, with a great passion for
-        problem-solving and process optimization. I particularly enjoy back-end
-        development, leveraging my enthusiasm to create robust, data-driven
-        applications.
-      </p>
-      <p>
-        So far in my coding adventures I have encountered these technologies:
-      </p>
-      <ul className="flex gap-4">
-        {aboutTechLogos.map((logo) => (
-          <Logo url={logo.file} name={logo.name} key={logo.name} />
-        ))}
-      </ul>
+      <Card>
+        <p>
+          Hello! I&#39;m Eduard, full-stack developer, with a great passion for
+          problem-solving and process optimization. I particularly enjoy
+          back-end development, leveraging my enthusiasm to create robust,
+          data-driven applications.
+        </p>
+      </Card>
+      <Card>
+        <p>
+          So far in my coding adventures I have encountered these technologies:
+        </p>
+        <ul className="flex gap-4">
+          {aboutTechLogos.map((logo) => (
+            <Logo url={logo.file} name={logo.name} key={logo.name} />
+          ))}
+        </ul>
+      </Card>
     </section>
   );
 }
