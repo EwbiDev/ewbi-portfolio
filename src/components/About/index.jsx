@@ -43,7 +43,7 @@ export default function About({ visible, setVisible }) {
   return (
     <section
       className="m-4 flex h-screen snap-start flex-col justify-center space-y-4"
-      id="About"
+      id="about"
       ref={ref}
     >
       <h2 className="text-5xl">About Me</h2>

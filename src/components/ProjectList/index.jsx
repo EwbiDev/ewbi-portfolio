@@ -28,7 +28,7 @@ export default function ProjectList({ visible, setVisible }) {
   return (
     <div
       className="m-4 flex h-screen snap-start flex-col justify-center"
-      id="Projects"
+      id="projects"
       ref={ref}
     >
       <h2 className="text-5xl">Projects</h2>

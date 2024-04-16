@@ -20,7 +20,7 @@ export default function Contact({ visible, setVisible }) {
   return (
     <section
       className="m-4 flex h-screen snap-start flex-col justify-center gap-4"
-      id="Contact"
+      id="contact"
       ref={ref}
     >
       <h2 className="text-5xl">Contact</h2>
