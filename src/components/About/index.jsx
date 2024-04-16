@@ -28,10 +28,11 @@ const aboutTechLogos = [
 
 export default function About() {
   return (
-    <section className="m-4 flex h-screen snap-start flex-col justify-center space-y-4">
-      <h2 className="text-5xl" id="About">
-        About Me
-      </h2>
+    <section
+      className="m-4 flex h-screen snap-start flex-col justify-center space-y-4"
+      id="About"
+    >
+      <h2 className="text-5xl">About Me</h2>
       <p>
         Hello! I&#39;m Eduard, full-stack developer, with a great passion for
         problem-solving and process optimization. I particularly enjoy back-end

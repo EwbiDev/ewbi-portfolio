@@ -14,10 +14,11 @@ const drumbiTechLogos = [
 
 export default function ProjectList() {
   return (
-    <div className="m-4 flex h-screen snap-start flex-col justify-center">
-      <h2 className="text-5xl" id="Projects">
-        Projects
-      </h2>
+    <div
+      className="m-4 flex h-screen snap-start flex-col justify-center"
+      id="Projects"
+    >
+      <h2 className="text-5xl">Projects</h2>
       <ul className="flex justify-center">
         <Project
           titleText="Drumbi - Drum Machine"

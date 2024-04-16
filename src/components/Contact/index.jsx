@@ -4,10 +4,11 @@ import github from "@assets/logos/github.svg"
 
 export default function Contact() {
   return (
-    <section className="m-4 flex h-screen snap-start flex-col justify-center">
-      <h2 className="text-5xl" id="Contact">
-        Contact
-      </h2>
+    <section
+      className="m-4 flex h-screen snap-start flex-col justify-center"
+      id="Contact"
+    >
+      <h2 className="text-5xl">Contact</h2>
       <p>Feel free to get in touch in the following places:</p>
       <ul className="flex gap-8">
         <ContactLink

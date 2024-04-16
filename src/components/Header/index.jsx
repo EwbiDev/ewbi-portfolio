@@ -3,7 +3,7 @@ import NavBar from "./components/NavBar";
 
 export default function Header() {
   return (
-    <header className="flex w-full justify-between bg-ewbi-red">
+    <header className="fixed top-0 z-10 flex w-full justify-between bg-ewbi-red">
       <Logo />
       <NavBar />
     </header>
