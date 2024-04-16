@@ -9,3 +9,7 @@
 .red-filter {
   filter: sepia(1) saturate(2) hue-rotate(280deg)
 }
+
+html {
+  scroll-behavior: smooth;
+}
