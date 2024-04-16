@@ -19,7 +19,7 @@ export default function ProjectList() {
       id="Projects"
     >
       <h2 className="text-5xl">Projects</h2>
-      <ul className="flex justify-center">
+      <ul className="flex">
         <Project
           titleText="Drumbi - Drum Machine"
           coverImg={drumbiCover}
