@@ -10,8 +10,6 @@ export default function OutSideClickHandler({
   useEffect(() => {
     const elements = document.querySelectorAll(childSelector);
 
-    console.log(elements);
-
     document.addEventListener("mousedown", handleOutsideClick);
     return () => {
       document.removeEventListener("mousedown", handleOutsideClick);
