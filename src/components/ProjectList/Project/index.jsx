@@ -19,11 +19,16 @@ export default function Project({
       <Card>
         <div className="flex flex-col gap-2">
           <h3 className="text-center text-3xl">{titleText}</h3>
-          <div className="relative mx-auto flex w-fit justify-center">
+          <div className="relative mx-auto flex w-fit flex-col justify-center gap-2 md:flex-row">
             <img src={coverImg} className="rounded-lg object-cover" />
-            <ul className="absolute right-1 top-1 flex gap-2">
+            <ul className="flex gap-2 md:flex-col">
               {techLogos.map((logo) => (
-                <Logo url={logo.file} name={logo.name} key={logo.name} />
+                <Logo
+                  url={logo.file}
+                  name={logo.name}
+                  key={logo.name}
+                  positionTooltipRight={true}
+                />
               ))}
             </ul>
           </div>
