@@ -20,7 +20,7 @@ export default function Content() {
   }, [visible]);
 
   return (
-    <main className="z-20 mx-auto grow sm:max-w-[640px] lg:max-w-[768px] xl:mx-64 xl:max-w-[1024px]">
+    <main className="z-20 mx-auto grow text-xl sm:max-w-[640px] lg:max-w-[768px] xl:mx-64 xl:max-w-[1024px]">
       <Landing visible={visible} setVisible={setVisible} />
       <About visible={visible} setVisible={setVisible} />
       <ProjectList visible={visible} setVisible={setVisible} />
