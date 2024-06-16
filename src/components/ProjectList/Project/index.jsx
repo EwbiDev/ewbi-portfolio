@@ -13,6 +13,7 @@ export default function Project({
   gitHubLinkText,
   demoLink,
   demoEnable,
+  showDemoBtn,
 }) {
   return (
     <li>
@@ -41,12 +42,14 @@ export default function Project({
               text={gitHubLinkText}
               enable={true}
             />
-            <LinkButton
-              href={demoLink}
-              imgSrc={link}
-              text="Live Demo (Coming Soon)"
-              enable={demoEnable}
-            />
+            {showDemoBtn && (
+              <LinkButton
+                href={demoLink}
+                imgSrc={link}
+                text="Live Demo (Coming Soon)"
+                enable={demoEnable}
+              />
+            )}
           </div>
         </div>
       </Card>
