@@ -46,7 +46,7 @@ export default function Project({
               <LinkButton
                 href={demoLink}
                 imgSrc={link}
-                text="Live Demo (Coming Soon)"
+                text="Live Demo"
                 enable={demoEnable}
               />
             )}

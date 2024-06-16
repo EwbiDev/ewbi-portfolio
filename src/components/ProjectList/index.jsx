@@ -61,8 +61,9 @@ export default function ProjectList({ visible, setVisible }) {
         users to iterate on their beat without interruptions."
           gitHubLink="https://github.com/EwbiDev/drumbi"
           gitHubLinkText="EwbiDev/drumbi"
-          demoLink="#"
-          demoEnable={false}
+          demoLink="https://ewbidev.github.io/drumbi/"
+          demoEnable={true}
+          showDemoBtn={true}
         />
       </ul>
     </div>
