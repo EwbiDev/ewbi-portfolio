@@ -10,11 +10,22 @@ import typeyCover from "@assets/projects/typey.png";
 import reactLogo from "@assets/logos/used-tech/react.svg";
 import tailwindLogo from "@assets/logos/used-tech/tailwind.svg";
 import javascriptLogo from "@assets/logos/used-tech/javascript.svg";
+import typescriptLogo from "@assets/logos/used-tech/typescript.svg";
+import nestJsLogo from "@assets/logos/used-tech/nestjs.svg";
+import dockerLogo from "@assets/logos/used-tech/docker.svg";
 
 const drumbiTechLogos = [
   { name: "React", file: reactLogo },
   { name: "Tailwind CSS", file: tailwindLogo },
   { name: "Javascript", file: javascriptLogo },
+];
+
+const typeyTechLogos = [
+  { name: "React", file: reactLogo },
+  { name: "Tailwind CSS", file: tailwindLogo },
+  { name: "NestJS", file: nestJsLogo },
+  { name: "Docker", file: dockerLogo },
+  { name: "Typescript", file: typescriptLogo },
 ];
 
 export default function ProjectList({ visible, setVisible }) {
@@ -33,7 +44,15 @@ export default function ProjectList({ visible, setVisible }) {
       ref={ref}
     >
       <h2 className="text-5xl">Projects</h2>
-      <ul className="flex">
+      <ul className="flex flex-col gap-4">
+        <Project
+          titleText="Typey - Typing Tester"
+          coverImg={typeyCover}
+          techLogos={typeyTechLogos}
+          summaryText="A typing test app which tracks a users' speed and accuracy while completing passages."
+          gitHubLink="https://github.com/EwbiDev/typey"
+          gitHubLinkText="EwbiDev/typey"
+        />
         <Project
           titleText="Drumbi - Drum Machine"
           coverImg={drumbiCover}
@@ -44,14 +63,6 @@ export default function ProjectList({ visible, setVisible }) {
           gitHubLinkText="EwbiDev/drumbi"
           demoLink="#"
           demoEnable={false}
-        />
-        <Project
-          titleText="Typey - Typing Tester"
-          coverImg={typeyCover}
-          techLogos={drumbiTechLogos}
-          summaryText="A typing test app which tracks a users' speed and accuracy while completing passages."
-          gitHubLink="https://github.com/EwbiDev/typey"
-          gitHubLinkText="EwbiDev/typey"
         />
       </ul>
     </div>
