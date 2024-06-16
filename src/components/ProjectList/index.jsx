@@ -5,6 +5,7 @@ import { useInView } from "react-intersection-observer";
 import Project from "./Project";
 
 import drumbiCover from "@assets/projects/drumbi.png";
+import typeyCover from "@assets/projects/typey.png";
 
 import reactLogo from "@assets/logos/used-tech/react.svg";
 import tailwindLogo from "@assets/logos/used-tech/tailwind.svg";
@@ -43,6 +44,14 @@ export default function ProjectList({ visible, setVisible }) {
           gitHubLinkText="EwbiDev/drumbi"
           demoLink="#"
           demoEnable={false}
+        />
+        <Project
+          titleText="Typey - Typing Tester"
+          coverImg={typeyCover}
+          techLogos={drumbiTechLogos}
+          summaryText="A typing test app which tracks a users' speed and accuracy while completing passages."
+          gitHubLink="https://github.com/EwbiDev/typey"
+          gitHubLinkText="EwbiDev/typey"
         />
       </ul>
     </div>
