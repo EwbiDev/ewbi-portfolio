@@ -38,12 +38,12 @@ export default function ProjectList({ visible, setVisible }) {
   }, [inView, visible, setVisible]);
 
   return (
-    <div
-      className="m-4 flex h-screen snap-start flex-col justify-center"
+    <section
+      className="m-4 flex h-fit min-h-screen snap-start flex-col justify-center"
       id="projects"
       ref={ref}
     >
-      <h2 className="text-5xl">Projects</h2>
+      <h2 className="mt-36 text-5xl">Projects</h2>
       <ul className="flex flex-col gap-4">
         <Project
           titleText="Typey - Typing Tester"
@@ -66,6 +66,6 @@ export default function ProjectList({ visible, setVisible }) {
           showDemoBtn={true}
         />
       </ul>
-    </div>
+    </section>
   );
 }
