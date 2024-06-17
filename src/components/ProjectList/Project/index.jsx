@@ -22,7 +22,7 @@ export default function Project({
           <h3 className="text-center text-3xl">{titleText}</h3>
           <div className="relative mx-auto flex w-fit flex-col justify-center gap-2 md:flex-row">
             <img src={coverImg} className="rounded-lg object-cover" />
-            <ul className="flex gap-2 md:flex-col">
+            <ul className="flex flex-wrap gap-2 md:flex-col">
               {techLogos.map((logo) => (
                 <Logo
                   url={logo.file}

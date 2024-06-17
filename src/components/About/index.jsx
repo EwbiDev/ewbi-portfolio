@@ -59,7 +59,7 @@ export default function About({ visible, setVisible }) {
         <p>
           So far in my coding adventures I have encountered these technologies:
         </p>
-        <ul className="flex gap-4">
+        <ul className="flex gap-4 flex-wrap">
           {aboutTechLogos.map((logo) => (
             <Logo url={logo.file} name={logo.name} key={logo.name} />
           ))}
