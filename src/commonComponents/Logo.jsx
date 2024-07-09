@@ -1,6 +1,6 @@
 export default function Logo({ url, name, positionTooltipRight }) {
   const tooltipBottomClass =
-    "absolute left-1/2 mx-auto -translate-x-1/2 translate-y-12 rounded-md bg-ewbi-red py-1 px-2 text-sm text-ewbi-gold opacity-0 transition-opacity group-hover:opacity-100 w-max";
+    "absolute left-1/2 mx-auto -translate-x-1/2 translate-y-12 rounded-md bg-ewbi-red py-1 px-2 text-sm text-ewbi-gold opacity-0 transition-opacity group-hover:opacity-100 w-max z-10";
   const tooltipRightClass =
     tooltipBottomClass + " md:left-12 md:translate-y-1/4 md:-translate-x-0";
   return (
