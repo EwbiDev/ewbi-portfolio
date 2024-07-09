@@ -16,6 +16,7 @@ import pythonLogo from "@assets/logos/used-tech/python.svg";
 import sqlserverLogo from "@assets/logos/used-tech/sqlserver.svg";
 import tailwindLogo from "@assets/logos/used-tech/tailwind.svg";
 import typescriptLogo from "@assets/logos/used-tech/typescript.svg";
+import awsLogo from "@assets/logos/used-tech/aws.svg";
 
 const aboutTechLogos = [
   { name: "HTML", file: htmlLogo },
@@ -29,6 +30,7 @@ const aboutTechLogos = [
   { name: "SQL Server", file: sqlserverLogo },
   { name: "Docker", file: dockerLogo },
   { name: "Git", file: gitLogo },
+  { name: "Amazon Web Services", file: awsLogo },
 ];
 
 export default function About({ visible, setVisible }) {
