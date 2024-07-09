@@ -34,7 +34,7 @@ export default function Project({
             </ul>
           </div>
 
-          <p>{summaryText}</p>
+          <p className="whitespace-pre-line">{summaryText}</p>
           <div className="flex flex-wrap justify-center gap-4">
             <LinkButton
               href={gitHubLink}
