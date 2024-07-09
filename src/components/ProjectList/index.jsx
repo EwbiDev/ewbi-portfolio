@@ -13,6 +13,8 @@ import javascriptLogo from "@assets/logos/used-tech/javascript.svg";
 import typescriptLogo from "@assets/logos/used-tech/typescript.svg";
 import nestJsLogo from "@assets/logos/used-tech/nestjs.svg";
 import dockerLogo from "@assets/logos/used-tech/docker.svg";
+import postgresLogo from "@assets/logos/used-tech/postgresql.svg";
+import awsLogo from "@assets/logos/used-tech/aws.svg";
 
 const drumbiTechLogos = [
   { name: "React", file: reactLogo },
@@ -21,11 +23,13 @@ const drumbiTechLogos = [
 ];
 
 const typeyTechLogos = [
+  { name: "Typescript", file: typescriptLogo },
   { name: "React", file: reactLogo },
   { name: "Tailwind CSS", file: tailwindLogo },
   { name: "NestJS", file: nestJsLogo },
+  { name: "PostgreSQL", file: postgresLogo },
   { name: "Docker", file: dockerLogo },
-  { name: "Typescript", file: typescriptLogo },
+  { name: "Amazon Web Services", file: awsLogo },
 ];
 
 export default function ProjectList({ visible, setVisible }) {
@@ -49,9 +53,14 @@ export default function ProjectList({ visible, setVisible }) {
           titleText="Typey - Typing Tester"
           coverImg={typeyCover}
           techLogos={typeyTechLogos}
-          summaryText="A typing test app which tracks a users' speed and accuracy while completing passages."
+          summaryText={
+            "A typing test app which tracks a users' speed and accuracy while completing passages.\nThe project has been containerized for deployment with docker for use with AWS Elastic Container Services."
+          }
           gitHubLink="https://github.com/EwbiDev/typey"
           gitHubLinkText="EwbiDev/typey"
+          demoLink="https://typey.ewbi.co.uk"
+          demoEnable={true}
+          showDemoBtn={true}
         />
         <Project
           titleText="Drumbi - Drum Machine"
