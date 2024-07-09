@@ -57,8 +57,7 @@ export default function ProjectList({ visible, setVisible }) {
           titleText="Drumbi - Drum Machine"
           coverImg={drumbiCover}
           techLogos={drumbiTechLogos}
-          summaryText="A sequencer which allows for changes to be made mid playback, allowing
-        users to iterate on their beat without interruptions."
+          summaryText="A sequencer which allows for changes to be made mid playback, allowing users to iterate on their beat without interruptions."
           gitHubLink="https://github.com/EwbiDev/drumbi"
           gitHubLinkText="EwbiDev/drumbi"
           demoLink="https://ewbidev.github.io/drumbi/"
